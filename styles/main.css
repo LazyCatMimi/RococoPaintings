@@ -1,4 +1,3 @@
-
 /*IMPORT FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Lora&family=Sail&display=swap');
 
@@ -70,21 +69,6 @@ button{
 button:hover{
     background-color:#fcb126;
 }
-
-h2{
-    background-color: #2d81ca;
-    box-sizing: content-box;
-    width: 600px;
-    border-bottom: 5px solid #fcb126;
-    border-radius: 10px;
-    margin: 50px auto;
-    color:white;
-}
-
-
-
-
-
 /*define fonts for lower headers and paragraphs*/
 h2{font: 50px 'Lora', serif; 
     text-align: center;
