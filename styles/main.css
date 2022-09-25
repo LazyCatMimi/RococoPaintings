@@ -1,0 +1,243 @@
+
+/*IMPORT FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Lora&family=Sail&display=swap');
+
+html{
+    margin: auto;
+    background-image: url("../assets/images/decor_BG3.png");
+    background-color: #fffcf9;
+    max-width: 100em; 
+    box-shadow: 0px 2px 50px #e9e8e5;
+}
+
+body{margin: 0;}
+
+/*-----------------header and top of page-----------------*/
+header {
+    /*define header background*/
+    background-image: url("../assets/images/Painting_Ceiling_Salon_Hercules.jpg");
+    background-size: cover;
+    background-position: center;
+    /*Create an inward shadow for vignette effect*/
+    box-shadow: inset 10px 5px 100px #000000;
+    /*define border*/
+    border: 10px ridge #fb8c0d;
+    /*alignment*/
+    box-sizing: border-box;
+    height: 500px;
+    text-align:center;}
+nav a{
+    color: #fbfdff;
+    display: inline;
+    padding: 20px 10px;
+    text-decoration:none;}
+/* change nav text appearance when on hover*/
+nav a:hover{
+    text-shadow: 0px 0px 5px #ff6f00;
+}
+/*title text*/
+h1{
+    font-family: 'Sail', cursive;
+    font-size: 90px;
+    color: #f6fafd;
+    line-height: 1.5;
+    text-shadow: 2px -2px 12px #0c0701;
+    vertical-align: middle;
+}
+
+/*-----------------main content-----------------*/
+main {
+    padding: 10px 100px; 
+    background-color: #FFFEFB;
+    margin: 0;
+}
+    
+/*button styles*/
+button{
+    /*button style*/
+    border: 3px solid  #fcb126;
+    background-color:#fcb126;
+    border-radius: 5px;
+    /*button position*/
+    display: block;
+    margin: 10px 0 50px auto;
+    /*button content*/
+    padding: 8px 50px;
+    font: 20px 'Baskervville', serif;
+    color: rgb(0, 0, 0);
+    
+}
+button:hover{
+    background-color:#fcb126;
+}
+
+h2{
+    background-color: #2d81ca;
+    box-sizing: content-box;
+    width: 600px;
+    border-bottom: 5px solid #fcb126;
+    border-radius: 10px;
+    margin: 50px auto;
+    color:white;
+}
+
+
+
+
+
+/*define fonts for lower headers and paragraphs*/
+h2{font: 50px 'Lora', serif; 
+    text-align: center;
+}
+h3{font: 40px 'Lora', serif;}
+h4{font: 25px 'Lora', serif;}
+p, li,nav {font: 25px 'Baskervville', serif;}
+
+/*baroque vs rococo img: container and img*/
+.descriptionImage{ 
+    margin: 95px 0px 0px 30px; 
+    text-align: center;
+    width: 570px;
+}
+.descriptionImage img { 
+    border-radius: 10px; 
+    border: 8px double #fb8c0d; 
+    width: 100%;
+
+}
+/*characteristic box*/
+.sideTab{
+    width: 30%;
+    padding: 30px;
+    margin: 30px 0px 30px 30px;
+    word-wrap: break-word;
+    /*container style*/
+    background-color: #fefdf9;
+    border: 5px double #fb8c0d; 
+    /*list style*/
+    list-style-type: circle;
+    list-style-position: inside;
+}
+.sideTab h4{margin-top: 0; width: 100%;}
+
+/*artists' portraits imgs: containers & imgs*/
+.artistContainer img { 
+    height:8em; 
+    border-radius: 10px; 
+    border: 4px inset #2d81ca;
+}
+.artistContainer{/*artist list*/
+    background-color: #f7f4f3;
+    /*make the items (artist blocks) show in a row and automatically fit into one line within the container*/
+    /*flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*remove bullet points and white space caused by bullet points*/
+    list-style-type: none;
+    padding: 0;
+}
+.artistContainer li{
+    /*make each item half the size of the container from the box's border*/
+
+    /*style of each artist container block*/
+    border-top: 5px solid #a3bfd6; 
+    
+}
+.artistContainer h4{
+    font-weight: bold;
+    color: #2d81ca;
+}
+
+/*gallery container & imgs*/
+.galleryContainer {
+    /*make content appear in the center*/
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -100px;
+}
+.galleryContainer img { /*gallery imgs*/
+    height: 370px; 
+    margin: 2px;
+}
+.galleryContainer img:hover{/*add a frame on hover*/
+    border: 2px inset #fb8c0d; 
+}
+
+/*-----------------float-----------------*/
+.floatRight{
+    float: right;
+}
+.floatLeft{
+    float: left;
+    margin: 30px;
+}
+.clearFloat{
+    clear: both;}
+
+/*-----------------Footer-----------------*/
+footer{
+    color: #686565;
+    margin: 0;
+    background-color: #f7f4f3;
+    padding: 2em;
+    /*make 4 column grid*/
+    display: grid;
+    grid-template-columns: auto auto auto auto;    
+}
+footer p{
+    margin: 0px 0px 5px 0px;
+}
+footer a{
+    font-size: 21px;
+    line-height: 2;
+    color: #2d81ca;
+}
+
+.footerNote{
+    grid-column:1/5;
+    text-align: center;
+}
+
+
+/*-------------media query (just practicing)-------------*/
+@media screen and (max-width:1000px){
+    main{padding:50px}
+    header {height: 100%;}
+    /*characteristic box*/
+    .sideTab{ 
+        width: 75%;
+        float: none;
+        margin: auto;
+        
+    }
+    /*baroque vs rococo img*/
+    .descriptionImage{
+        width: 100%;
+        margin:0;
+        float: none;
+    }
+    .descriptionImage img{
+        width: 100%;
+    }
+    /*artist list*/
+    .artistContainer {grid-template-columns:1fr;}/*make the artist boxes each fill the whole screen instead of half*/
+    .artistContainer img{height: 150px;}
+    /*gallery imgs*/
+    .galleryContainer{margin: 0 -50px;}
+    .galleryContainer img { /*make gallery imgs fill the entire width of its container*/
+        width: 100%; 
+        height: auto;
+        margin: 2px;
+    }
+    /*footer*/
+    footer{ display: grid; 
+        grid-template-columns:2fr;
+        text-align: center;
+    }
+    footer article{margin-top: 50px;}
+    .footerNote{
+        grid-column:1/1;
+        text-align: center;
+    }
+}
